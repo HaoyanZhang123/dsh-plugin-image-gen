@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "生图",
+    "description": "通过你自己配置的 OpenAI 兼容端点生成图片。端点、模型和 API key 均由你提供。"
+  }
+}

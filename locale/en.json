@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Image Generation",
+    "description": "Generate images through your own OpenAI-compatible endpoint. You bring the endpoint, models, and API key."
+  }
+}

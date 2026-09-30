@@ -1,0 +1,6 @@
+# dsh-plugin-image-gen bundle patch.
+# Adds only this plugin's own row. It does not replace, reorder, or disable any
+# official DSH component, and it carries no endpoint, model, or credential.
+- insert:
+    - id: image-gen
+      name: dsh-plugin-image-gen

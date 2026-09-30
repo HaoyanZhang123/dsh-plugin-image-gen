@@ -1,0 +1,52 @@
+{
+  "name": "dsh-plugin-image-gen",
+  "version": "0.1.0",
+  "description": "Generate images through any OpenAI-compatible endpoint you configure. No endpoints or credentials ship with this package.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaoyanZhang123/dsh-plugin-image-gen.git"
+  },
+  "homepage": "https://github.com/HaoyanZhang123/dsh-plugin-image-gen",
+  "bugs": {
+    "url": "https://github.com/HaoyanZhang123/dsh-plugin-image-gen/issues"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/en.json": "./locale/en.json",
+    "./locale/zh.json": "./locale/zh.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "COMPATIBILITY.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test tests/",
+    "pack:check": "node tools/check-package.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "image-generation",
+    "openai-compatible"
+  ]
+}

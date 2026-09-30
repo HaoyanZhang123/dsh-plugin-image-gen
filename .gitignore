@@ -1,0 +1,10 @@
+# Installed dependencies
+node_modules/
+
+# Release artifacts (attached to GitHub Releases, not committed)
+*.tgz
+
+# Local machine files
+.DS_Store
+Thumbs.db
+*.log
