@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.2
+
+Documentation-only release: the user-facing setup path is now complete enough
+for someone who has never seen this plugin.
+
+- **Fixed a misleading install spec**: the README still pointed at
+  <code>#v0.1.0</code>, the broken release. Install instructions now lead with the
+  tagless GitHub spec and a pinned <code>#v0.1.2</code> alternative.
+- **Added the missing setup context**: where the DSH home actually is on Windows
+  and macOS, the three places an API key can live, a Windows JSON backslash
+  warning, and a verification step.
+- **Added a Troubleshooting table**: missing key, invalid JSON, HTTP 401/404/429,
+  non-OpenAI response shape, timeouts, and proxy problems.
+- Chinese README rewritten to match, so both languages carry the same steps.
+
 ## 0.1.1
 
 Fixes a schema bug that prevented the plugin from activating at all.
