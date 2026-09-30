@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.1.1
+
+Fixes a schema bug that prevented the plugin from activating at all.
+
+- **Tool definitions now use the JSON Schema subset DSH actually accepts.**
+  0.1.0 copied the <code>defineTool</code> input spec style
+  (<code>{ type: 'string', required: true }</code> per property), but
+  <code>ctx.tools.register()</code> takes a finished JSON Schema where an object
+  declares <code>required: ['name']</code> and where
+  <code>minimum</code>/<code>maximum</code> are not supported at all. The entry
+  failed with <code>JsonSchemaError: schema.properties.message.required is not
+  supported on type "string"</code>. Requiredness moved to object level and the
+  <code>n</code> range now lives in its description.
+- **Regression coverage**: new <code>tests/schema.test.mjs</code> enforces the
+  supported keyword subset, the per-type keyword restrictions, and
+  object-level requiredness locally, rejects the exact 0.1.0 shape, and
+  additionally validates the definitions with the real DSH validator when a
+  runtime is resolvable.
+
 ## 0.1.0
 
 Initial release.

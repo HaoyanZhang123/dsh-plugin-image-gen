@@ -55,7 +55,7 @@ test('apply registers generate_image and get_image_gen_config', async () => {
   assert.ok(registered.has('generate_image'))
   assert.ok(registered.has('get_image_gen_config'))
   const gen = registered.get('generate_image')
-  assert.equal(gen.parameters.properties.prompt.required, true)
+  assert.deepEqual(gen.parameters.required, ['prompt'])
   assert.equal(typeof gen.output.render, 'function')
   assert.match(gen.description, /read_image/)
   assert.match(gen.description, /endpoint/)

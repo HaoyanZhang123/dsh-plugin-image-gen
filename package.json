@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-image-gen",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate images through any OpenAI-compatible endpoint you configure. No endpoints or credentials ship with this package.",
   "type": "module",
   "license": "MIT",
